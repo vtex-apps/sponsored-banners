@@ -19,7 +19,8 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
     "graphql": "^14.6.0",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "vtex.store-resources": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.100.0/public/@types/vtex.store-resources"
   },
   "resolutions": {
     "@types/jest": "26.0.15"
