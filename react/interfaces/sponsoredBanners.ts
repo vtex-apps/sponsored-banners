@@ -4,6 +4,7 @@ interface Advertisement {
   adResponseId: string
   campaignId: string
   imageUrl: string
+  targetUrl: string
 }
 interface SponsoredBanner {
   bannerId: string
