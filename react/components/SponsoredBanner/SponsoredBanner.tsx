@@ -20,18 +20,24 @@ export const SponsoredBanner = () => {
     }
   )
 
+  const styleProps = {
+    width: isMobile ? '320px' : '1232px',
+    height: isMobile ? '50px' : '270px',
+    spinnerSize: isMobile ? 20 : 40,
+  }
+
   return (
     <div
       style={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: isMobile ? '320px' : '1232px',
-        height: isMobile ? '50px' : '270px',
+        width: styleProps.width,
+        height: styleProps.height,
       }}
     >
       {loading ? (
-        <Spinner size={isMobile ? 20 : 40} />
+        <Spinner size={styleProps.spinnerSize} />
       ) : (
         data?.sponsoredBanners.map((banner) => (
           <img
@@ -39,7 +45,8 @@ export const SponsoredBanner = () => {
             src={banner.advertisement.imageUrl}
             alt={formatMessage(messages.sponsoredBanner)}
             style={{
-              width: '100%',
+              width: styleProps.width,
+              height: styleProps.height,
             }}
           />
         ))
