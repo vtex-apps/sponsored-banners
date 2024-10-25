@@ -4,6 +4,7 @@ import { useCssHandles } from 'vtex.css-handles'
 
 import './styles.css'
 import { useSponsoredBanner } from './hook'
+import { getDataProperties } from '../../utils'
 
 const CSS_HANDLES = ['bannerWrapper', 'bannerImage'] as const
 
@@ -20,8 +21,12 @@ export const SponsoredBanner = () => {
     return null
   }
 
+  const banner = data.sponsoredBanners[0]
+  const dataProperties = getDataProperties(banner.advertisement)
+
   return (
     <div
+      {...dataProperties}
       className={`${handles.bannerWrapper} flex justify-center items-center`}
       style={{
         width: styleProps.width,
@@ -31,29 +36,27 @@ export const SponsoredBanner = () => {
       {loading ? (
         <Spinner size={styleProps.spinnerSize} />
       ) : (
-        data?.sponsoredBanners.map((banner) => (
-          <button
-            key={banner.bannerId}
-            onClick={() => {
-              handleClick(banner.advertisement.targetUrl)
-            }}
+        <button
+          key={banner.bannerId}
+          onClick={() => {
+            handleClick(banner.advertisement.targetUrl)
+          }}
+          style={{
+            padding: 0,
+            border: 'none',
+            background: 'none',
+          }}
+        >
+          <img
+            className={handles.bannerImage}
+            src={banner.advertisement.imageUrl}
+            alt={imageAlt}
             style={{
-              padding: 0,
-              border: 'none',
-              background: 'none',
+              width: styleProps.width,
+              height: styleProps.height,
             }}
-          >
-            <img
-              className={handles.bannerImage}
-              src={banner.advertisement.imageUrl}
-              alt={imageAlt}
-              style={{
-                width: styleProps.width,
-                height: styleProps.height,
-              }}
-            />
-          </button>
-        ))
+          />
+        </button>
       )}
     </div>
   )
