@@ -23,8 +23,8 @@ export function useSponsoredBanner() {
   )
 
   const styleProps = {
-    width: isDesktop ? '1232px' : '320px',
-    height: isDesktop ? '270px' : '50px',
+    width: isDesktop ? '970px' : '300px',
+    height: isDesktop ? '250px' : '50px',
     spinnerSize: isDesktop ? 40 : 20,
   }
 
