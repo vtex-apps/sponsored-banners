@@ -3,10 +3,17 @@ import { useIntl } from 'react-intl'
 import { useDevice } from 'vtex.device-detector'
 import sponsoredBannersQuery from 'vtex.store-resources/QuerySponsoredBanners'
 
-import type { SponsoredBannersData } from '../../interfaces'
+import type {
+  SponsoredBannersData,
+  SponsoredBannersProps,
+} from '../../interfaces'
 import messages from '../../messages'
 
-export function useSponsoredBanner() {
+export function useSponsoredBanner({
+  adUnit,
+  placement,
+  channel,
+}: SponsoredBannersProps) {
   const { formatMessage } = useIntl()
   const { device } = useDevice()
   const isDesktop = device === 'desktop'
@@ -15,24 +22,28 @@ export function useSponsoredBanner() {
     sponsoredBannersQuery,
     {
       variables: {
-        placement: 'homepage',
-        adUnit: isDesktop ? 'billboard' : 'smartphone-banner',
-        channel: isDesktop ? 'website' : 'mobile',
+        placement,
+        adUnit,
+        channel,
       },
     }
   )
-
-  const styleProps = {
-    width: isDesktop ? '970px' : '300px',
-    height: isDesktop ? '250px' : '50px',
-    spinnerSize: isDesktop ? 40 : 20,
-  }
 
   function handleClick(url: string) {
     window.open(url, '_self')
   }
 
   const imageAlt = formatMessage(messages.sponsoredBanner)
+
+  const styleProps = {
+    width: data?.sponsoredBanners?.[0]?.advertisement.width || 0,
+    height: data?.sponsoredBanners?.[0]?.advertisement.height || 0,
+    ratio: data
+      ? data.sponsoredBanners[0].advertisement.width /
+        data.sponsoredBanners[0].advertisement.height
+      : 0,
+    spinnerSize: isDesktop ? 40 : 20,
+  }
 
   return {
     data,
