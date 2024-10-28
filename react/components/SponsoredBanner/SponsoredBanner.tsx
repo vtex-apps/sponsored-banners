@@ -2,16 +2,18 @@ import React from 'react'
 import { Spinner } from 'vtex.styleguide'
 import { useCssHandles } from 'vtex.css-handles'
 
-import './styles.css'
 import { useSponsoredBanner } from './hook'
 import { getDataProperties } from '../../utils'
+import type { SponsoredBannersProps } from '../../interfaces'
+
+import './styles.css'
 
 const CSS_HANDLES = ['bannerWrapper', 'bannerImage'] as const
 
-export const SponsoredBanner = () => {
+export const SponsoredBanner = (props: SponsoredBannersProps) => {
   const handles = useCssHandles(CSS_HANDLES)
   const { data, error, handleClick, loading, styleProps, imageAlt } =
-    useSponsoredBanner()
+    useSponsoredBanner(props)
 
   if (
     !!error ||
@@ -29,8 +31,9 @@ export const SponsoredBanner = () => {
       {...dataProperties}
       className={`${handles.bannerWrapper} flex justify-center items-center`}
       style={{
-        width: styleProps.width,
-        height: styleProps.height,
+        maxWidth: styleProps.width,
+        height: 'auto',
+        aspectRatio: `${styleProps.ratio}`,
       }}
     >
       {loading ? (
@@ -45,6 +48,7 @@ export const SponsoredBanner = () => {
             padding: 0,
             border: 'none',
             background: 'none',
+            cursor: 'pointer',
           }}
         >
           <img
@@ -53,7 +57,8 @@ export const SponsoredBanner = () => {
             alt={imageAlt}
             style={{
               width: styleProps.width,
-              height: styleProps.height,
+              height: 'auto',
+              aspectRatio: `${styleProps.ratio}`,
             }}
           />
         </button>
