@@ -1,7 +1,8 @@
-import type { Advertisement, DataProperties } from '../interfaces'
+import type { DataProperties, SponsoredBanner } from '../interfaces'
 
-export function getDataProperties(ad: Advertisement): DataProperties {
-  const { bannerImageId, adResponseId } = ad
+export function getDataProperties(banner: SponsoredBanner): DataProperties {
+  const { adResponseId, advertisement } = banner
+  const { bannerImageId } = advertisement
 
   return {
     'data-van-aid': bannerImageId,
