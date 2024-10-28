@@ -24,7 +24,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
   }
 
   const banner = data.sponsoredBanners[0]
-  const dataProperties = getDataProperties(banner.advertisement)
+  const dataProperties = getDataProperties(banner)
 
   return (
     <div
@@ -40,7 +40,6 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
         <Spinner size={styleProps.spinnerSize} />
       ) : (
         <button
-          key={banner.bannerId}
           onClick={() => {
             handleClick(banner.advertisement.targetUrl)
           }}
