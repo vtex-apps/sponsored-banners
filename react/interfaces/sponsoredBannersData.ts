@@ -1,14 +1,13 @@
-export interface Advertisement {
-  adResponseId: string
+interface Advertisement {
+  bannerImageId: string
   imageUrl: string
   targetUrl: string
-  bannerImageId: string
   width: number
   height: number
 }
 
-interface SponsoredBanner {
-  bannerId: string
+export interface SponsoredBanner {
+  adResponseId: string
   advertisement: Advertisement
 }
 
