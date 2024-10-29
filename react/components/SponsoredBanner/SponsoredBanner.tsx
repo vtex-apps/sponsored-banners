@@ -65,3 +65,29 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
     </div>
   )
 }
+
+SponsoredBanner.defaultProps = {
+  adUnit: 'billboard',
+  placement: 'homepage',
+}
+
+SponsoredBanner.schema = {
+  title: 'store/sponsored-banner',
+  type: 'object',
+  properties: {
+    adUnit: {
+      type: 'string',
+      title: 'admin/editor.ad-unit',
+      default: 'billboard',
+      enum: ['billboard'],
+      enumNames: ['970px x 250px'],
+    },
+    placement: {
+      type: 'string',
+      title: 'admin/editor.placement',
+      default: 'homepage',
+      enum: ['homepage'],
+      enumNames: ['admin/editor.placement.homepage'],
+    },
+  },
+}
