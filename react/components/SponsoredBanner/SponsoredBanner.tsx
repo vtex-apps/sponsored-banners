@@ -68,7 +68,6 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
 
 SponsoredBanner.defaultProps = {
   adUnit: 'billboard',
-  placement: 'homepage',
 }
 
 SponsoredBanner.schema = {
@@ -81,13 +80,6 @@ SponsoredBanner.schema = {
       default: 'billboard',
       enum: ['billboard'],
       enumNames: ['970px x 250px'],
-    },
-    placement: {
-      type: 'string',
-      title: 'admin/editor.placement',
-      default: 'homepage',
-      enum: ['homepage'],
-      enumNames: ['admin/editor.placement.homepage'],
     },
   },
 }

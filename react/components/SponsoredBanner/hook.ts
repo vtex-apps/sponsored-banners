@@ -11,8 +11,8 @@ import messages from '../../messages'
 
 export function useSponsoredBanner({
   adUnit,
-  placement,
-  channel,
+  placement = 'homepage',
+  channel = 'website',
 }: SponsoredBannersProps) {
   const { formatMessage } = useIntl()
   const { device } = useDevice()

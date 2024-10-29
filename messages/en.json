@@ -1,12 +1,4 @@
 {
   "store/sponsored-banner": "Sponsored banner",
-  "admin/editor.ad-unit": "Dimensions",
-  "admin/editor.placement": "Placement",
-  "admin/editor.placement.homepage": "Homepage",
-  "admin/editor.channel": "Channel",
-  "admin/editor.channel.website": "Website",
-  "admin/editor.channel.android": "Android",
-  "admin/editor.channel.ios": "iOS",
-  "admin/editor.channel.msite": "MSite",
-  "admin/editor.channel.whatsapp": "Whatsapp"
+  "admin/editor.ad-unit": "Dimensions"
 }

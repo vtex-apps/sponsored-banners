@@ -6,6 +6,6 @@ type Channel = 'website' | 'android' | 'ios' | 'msite' | 'whatsapp'
 
 export interface SponsoredBannersProps {
   adUnit: AdUnit
-  placement: Placement
+  placement?: Placement
   channel?: Channel
 }
