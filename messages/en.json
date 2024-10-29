@@ -1,3 +1,6 @@
 {
-  "store/sponsored-banner": "Sponsored banner"
+  "store/sponsored-banner": "Sponsored banner",
+  "admin/editor.ad-unit": "Dimensions",
+  "admin/editor.placement": "Placement",
+  "admin/editor.channel": "Channel"
 }

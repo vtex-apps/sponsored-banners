@@ -1,3 +1,6 @@
 {
-  "store/sponsored-banner": "Banner patrocinado"
+  "store/sponsored-banner": "Banner patrocinado",
+  "admin/editor.ad-unit": "Dimensiones",
+  "admin/editor.placement": "Colocación",
+  "admin/editor.channel": "Canal"
 }
