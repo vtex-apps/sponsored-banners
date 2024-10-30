@@ -3,11 +3,13 @@ import { useIntl } from 'react-intl'
 import { useDevice } from 'vtex.device-detector'
 import sponsoredBannersQuery from 'vtex.store-resources/QuerySponsoredBanners'
 
+import messages from '../../messages'
 import type {
   SponsoredBannersData,
   SponsoredBannersProps,
 } from '../../interfaces'
-import messages from '../../messages'
+
+const SPONSORED_COUNT = 1
 
 export function useSponsoredBanner({
   adUnit,
@@ -22,6 +24,7 @@ export function useSponsoredBanner({
     sponsoredBannersQuery,
     {
       variables: {
+        sponsoredCount: SPONSORED_COUNT,
         placement,
         adUnit,
         channel,
@@ -36,17 +39,16 @@ export function useSponsoredBanner({
   const imageAlt = formatMessage(messages.sponsoredBanner)
 
   const styleProps = {
-    width: data?.sponsoredBanners?.[0]?.advertisement.width || 0,
-    height: data?.sponsoredBanners?.[0]?.advertisement.height || 0,
-    ratio: data
-      ? data.sponsoredBanners[0].advertisement.width /
-        data.sponsoredBanners[0].advertisement.height
-      : 0,
     spinnerSize: isDesktop ? 40 : 20,
+    ratio:
+      data && data.sponsoredBanners.length > 0
+        ? data.sponsoredBanners[0].advertisement.width /
+          data.sponsoredBanners[0].advertisement.height
+        : 0,
   }
 
   return {
-    data,
+    sponsoredBanners: data?.sponsoredBanners ?? [],
     loading,
     error,
     styleProps,

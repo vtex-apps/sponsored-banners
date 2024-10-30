@@ -12,18 +12,20 @@ const CSS_HANDLES = ['bannerWrapper', 'bannerImage'] as const
 
 export const SponsoredBanner = (props: SponsoredBannersProps) => {
   const handles = useCssHandles(CSS_HANDLES)
-  const { data, error, handleClick, loading, styleProps, imageAlt } =
-    useSponsoredBanner(props)
+  const {
+    sponsoredBanners,
+    error,
+    handleClick,
+    loading,
+    styleProps,
+    imageAlt,
+  } = useSponsoredBanner(props)
 
-  if (
-    !!error ||
-    !data?.sponsoredBanners ||
-    data.sponsoredBanners.length === 0
-  ) {
+  if (!!error || !sponsoredBanners || sponsoredBanners.length === 0) {
     return null
   }
 
-  const banner = data.sponsoredBanners[0]
+  const banner = sponsoredBanners[0]
   const dataProperties = getDataProperties(banner)
 
   return (
@@ -31,7 +33,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
       {...dataProperties}
       className={`${handles.bannerWrapper} flex justify-center items-center`}
       style={{
-        maxWidth: styleProps.width,
+        maxWidth: banner.advertisement.width,
         height: 'auto',
         aspectRatio: `${styleProps.ratio}`,
       }}
@@ -55,7 +57,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
             src={banner.advertisement.imageUrl}
             alt={imageAlt}
             style={{
-              width: styleProps.width,
+              width: banner.advertisement.width,
               height: 'auto',
               aspectRatio: `${styleProps.ratio}`,
             }}
