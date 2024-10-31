@@ -32,10 +32,6 @@ export function useSponsoredBanner({
     }
   )
 
-  function handleClick(url: string) {
-    window.open(url, '_self')
-  }
-
   const imageAlt = formatMessage(messages.sponsoredBanner)
 
   const styleProps = {
@@ -52,7 +48,6 @@ export function useSponsoredBanner({
     loading,
     error,
     styleProps,
-    handleClick,
     imageAlt,
   }
 }

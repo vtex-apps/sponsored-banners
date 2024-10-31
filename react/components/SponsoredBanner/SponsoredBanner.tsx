@@ -12,14 +12,8 @@ const CSS_HANDLES = ['bannerWrapper', 'bannerImage'] as const
 
 export const SponsoredBanner = (props: SponsoredBannersProps) => {
   const handles = useCssHandles(CSS_HANDLES)
-  const {
-    sponsoredBanners,
-    error,
-    handleClick,
-    loading,
-    styleProps,
-    imageAlt,
-  } = useSponsoredBanner(props)
+  const { sponsoredBanners, error, loading, styleProps, imageAlt } =
+    useSponsoredBanner(props)
 
   if (!!error || !sponsoredBanners || sponsoredBanners.length === 0) {
     return null
@@ -41,10 +35,8 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
       {loading ? (
         <Spinner size={styleProps.spinnerSize} />
       ) : (
-        <button
-          onClick={() => {
-            handleClick(banner.advertisement.targetUrl)
-          }}
+        <a
+          href={banner.advertisement.targetUrl}
           style={{
             padding: 0,
             border: 'none',
@@ -62,7 +54,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
               aspectRatio: `${styleProps.ratio}`,
             }}
           />
-        </button>
+        </a>
       )}
     </div>
   )
