@@ -2,7 +2,7 @@ import React from 'react'
 import { Spinner } from 'vtex.styleguide'
 import { useCssHandles } from 'vtex.css-handles'
 
-import { useSponsoredBanner } from './hook'
+import { useSponsoredBanner } from './useSponsoredBanner'
 import { getDataProperties } from '../../utils'
 import type { SponsoredBannersProps } from '../../interfaces'
 
