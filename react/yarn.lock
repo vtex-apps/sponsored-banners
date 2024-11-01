@@ -6339,13 +6339,9 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles":
-  version "1.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles#336b23ef3a9bcb2b809529ba736783acd405d081"
-
-"vtex.store-resources@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.0/public/@types/vtex.store-resources":
-  version "0.101.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.0/public/@types/vtex.store-resources#d692dadaabcbbd879a611dc5bec3dcd0d4f3fb31"
+"vtex.store-resources@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.1/public/@types/vtex.store-resources":
+  version "0.101.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.1/public/@types/vtex.store-resources#886858b2d64ac5b0c92fd21b7f855c821a6efc9b"
 
 "vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.13/public/@types/vtex.styleguide":
   version "9.146.13"
