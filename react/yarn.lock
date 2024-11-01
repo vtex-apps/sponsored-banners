@@ -7607,6 +7607,10 @@ verror@1.10.0:
   version "0.101.1"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.1/public/@types/vtex.store-resources#886858b2d64ac5b0c92fd21b7f855c821a6efc9b"
 
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide":
+  version "9.146.9"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide#d1601fedfb665c6173334753171717da64e670bc"
+
 w3c-hr-time@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.2.tgz#0a89cdf5cc15822df9c360543676963e0cc308cd"
