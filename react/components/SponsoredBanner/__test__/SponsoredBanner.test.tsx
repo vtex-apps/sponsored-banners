@@ -10,10 +10,6 @@ jest.mock('../useSponsoredBanner', () => ({
   useSponsoredBanner: jest.fn(),
 }))
 
-beforeAll(() => {
-  jest.spyOn(window, 'open').mockImplementation(() => null)
-})
-
 describe('SponsoredBanner component', () => {
   describe('when there are banners available', () => {
     beforeEach(() => {
