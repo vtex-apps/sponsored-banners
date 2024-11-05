@@ -3,7 +3,7 @@ import type {
   SponsoredBannersProps,
 } from '../../../../interfaces'
 
-export const mockData: SponsoredBannersData = {
+export const mockSponsoredBannersData: SponsoredBannersData = {
   sponsoredBanners: [
     {
       adResponseId: '123',

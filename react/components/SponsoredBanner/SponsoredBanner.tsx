@@ -30,6 +30,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
   return (
     <div
       {...dataProperties}
+      data-testid="banner"
       className={`${handles.bannerWrapper} flex justify-center items-center`}
       style={{
         maxWidth: banner.advertisement.width,
