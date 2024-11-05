@@ -4,7 +4,7 @@ import { render } from '@vtex/test-tools/react'
 
 import { SponsoredBanner } from '../SponsoredBanner'
 import { useSponsoredBanner } from '../useSponsoredBanner'
-import { mockSponsoredBannersData } from './mocks/sponsoredBanner'
+import { mockSponsoredBannersData } from './mocks'
 
 jest.mock('../useSponsoredBanner', () => ({
   useSponsoredBanner: jest.fn(),

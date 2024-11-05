@@ -2,7 +2,7 @@ import { useQuery } from 'react-apollo'
 import { renderHook } from '@vtex/test-tools/react'
 import { useDevice } from 'vtex.device-detector'
 
-import { mockSponsoredBannersData, props } from './mocks/sponsoredBanner'
+import { mockSponsoredBannersData, props } from './mocks'
 import { useSponsoredBanner } from '../useSponsoredBanner'
 
 jest.mock('react-apollo', () => ({
