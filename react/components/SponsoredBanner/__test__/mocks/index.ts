@@ -3,7 +3,7 @@ import type {
   SponsoredBannersProps,
 } from '../../../../interfaces'
 
-export const mockSponsoredBannersData: SponsoredBannersData = {
+export const mockData: SponsoredBannersData = {
   sponsoredBanners: [
     {
       adResponseId: '123',
@@ -18,7 +18,7 @@ export const mockSponsoredBannersData: SponsoredBannersData = {
   ],
 }
 
-export const props: SponsoredBannersProps = {
+export const mockProps: SponsoredBannersProps = {
   adUnit: 'billboard',
   placement: 'homepage',
   channel: 'android',

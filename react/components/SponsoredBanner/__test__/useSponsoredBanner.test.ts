@@ -2,7 +2,7 @@ import { useQuery } from 'react-apollo'
 import { renderHook } from '@vtex/test-tools/react'
 import { useDevice } from 'vtex.device-detector'
 
-import { mockSponsoredBannersData, props } from './mocks'
+import { mockData, mockProps } from './mocks'
 import { useSponsoredBanner } from '../useSponsoredBanner'
 
 jest.mock('react-apollo', () => ({
@@ -26,7 +26,7 @@ describe('useSponsoredBanner hook', () => {
   describe('when it has data without error', () => {
     beforeEach(() => {
       ;(useQuery as jest.Mock).mockReturnValue({
-        data: mockSponsoredBannersData,
+        data: mockData,
         loading: false,
         error: null,
       })
@@ -34,7 +34,7 @@ describe('useSponsoredBanner hook', () => {
     })
 
     it('should return correct values', () => {
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.loading).toBe(false)
       expect(result.current.error).toBeNull()
@@ -62,7 +62,7 @@ describe('useSponsoredBanner hook', () => {
     it('should return correct values for mobile', () => {
       ;(useDevice as jest.Mock).mockReturnValueOnce({ device: 'mobile' })
 
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.styleProps).toEqual({
         spinnerSize: 20,
@@ -81,7 +81,7 @@ describe('useSponsoredBanner hook', () => {
     })
 
     it('should return correct values', () => {
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.loading).toBe(false)
       expect(result.current.error).toBe('error')
@@ -106,7 +106,7 @@ describe('useSponsoredBanner hook', () => {
     })
 
     it('should return correct values', () => {
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.loading).toBe(false)
       expect(result.current.error).toBeNull()
@@ -131,7 +131,7 @@ describe('useSponsoredBanner hook', () => {
     })
 
     it('should return correct values', () => {
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.loading).toBe(false)
       expect(result.current.error).toBeNull()
@@ -156,7 +156,7 @@ describe('useSponsoredBanner hook', () => {
     })
 
     it('should return correct values', () => {
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.loading).toBe(true)
       expect(result.current.error).toBeNull()
@@ -174,14 +174,14 @@ describe('useSponsoredBanner hook', () => {
   describe('when loading is true and it has ]] data', () => {
     beforeEach(() => {
       ;(useQuery as jest.Mock).mockReturnValue({
-        data: mockSponsoredBannersData,
+        data: mockData,
         loading: true,
         error: null,
       })
     })
 
     it('should return correct values', () => {
-      const { result } = renderHook(() => useSponsoredBanner(props))
+      const { result } = renderHook(() => useSponsoredBanner(mockProps))
 
       expect(result.current.loading).toBe(true)
       expect(result.current.error).toBeNull()

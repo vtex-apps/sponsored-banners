@@ -4,7 +4,7 @@ import { render } from '@vtex/test-tools/react'
 
 import { SponsoredBanner } from '../SponsoredBanner'
 import { useSponsoredBanner } from '../useSponsoredBanner'
-import { mockSponsoredBannersData } from './mocks'
+import { mockData } from './mocks'
 
 jest.mock('../useSponsoredBanner', () => ({
   useSponsoredBanner: jest.fn(),
@@ -14,7 +14,7 @@ describe('SponsoredBanner component', () => {
   describe('when there are banners available', () => {
     beforeEach(() => {
       ;(useSponsoredBanner as jest.Mock).mockReturnValue({
-        sponsoredBanners: mockSponsoredBannersData.sponsoredBanners,
+        sponsoredBanners: mockData.sponsoredBanners,
         imageAlt: 'Alt da imagem',
         loading: false,
         error: null,
@@ -67,7 +67,7 @@ describe('SponsoredBanner component', () => {
   describe('when loading is true', () => {
     beforeEach(() => {
       ;(useSponsoredBanner as jest.Mock).mockReturnValue({
-        sponsoredBanners: mockSponsoredBannersData.sponsoredBanners,
+        sponsoredBanners: mockData.sponsoredBanners,
         imageAlt: 'Alt da imagem',
         loading: true,
         error: null,
@@ -91,7 +91,7 @@ describe('SponsoredBanner component', () => {
   describe('when showBanner prop is false', () => {
     beforeEach(() => {
       ;(useSponsoredBanner as jest.Mock).mockReturnValue({
-        sponsoredBanners: mockSponsoredBannersData.sponsoredBanners,
+        sponsoredBanners: mockData.sponsoredBanners,
         imageAlt: 'Alt da imagem',
         loading: false,
         error: null,
@@ -118,7 +118,7 @@ describe('SponsoredBanner component', () => {
   describe('when it has any error', () => {
     beforeEach(() => {
       ;(useSponsoredBanner as jest.Mock).mockReturnValue({
-        sponsoredBanners: mockSponsoredBannersData.sponsoredBanners,
+        sponsoredBanners: mockData.sponsoredBanners,
         imageAlt: 'Alt da imagem',
         loading: false,
         error: true,
