@@ -15,7 +15,12 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
   const { sponsoredBanners, error, loading, styleProps, imageAlt } =
     useSponsoredBanner(props)
 
-  if (!!error || !sponsoredBanners || sponsoredBanners.length === 0) {
+  if (
+    !props.showBanner ||
+    !!error ||
+    !sponsoredBanners ||
+    sponsoredBanners.length === 0
+  ) {
     return null
   }
 
@@ -62,6 +67,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
 
 SponsoredBanner.defaultProps = {
   adUnit: 'billboard',
+  showBanner: true,
 }
 
 SponsoredBanner.schema = {
@@ -74,6 +80,11 @@ SponsoredBanner.schema = {
       default: 'billboard',
       enum: ['billboard'],
       enumNames: ['970px x 250px'],
+    },
+    showBanner: {
+      type: 'boolean',
+      title: 'admin/editor.show-banner',
+      default: true,
     },
   },
 }
