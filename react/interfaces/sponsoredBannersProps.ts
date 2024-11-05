@@ -8,4 +8,5 @@ export interface SponsoredBannersProps {
   adUnit: AdUnit
   placement?: Placement
   channel?: Channel
+  showBanner?: boolean
 }
