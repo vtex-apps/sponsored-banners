@@ -14,7 +14,7 @@
     "vtex.store-resources": "0.x",
     "vtex.device-detector": "0.x",
     "vtex.styleguide": "9.x",
-    "vtex.css-handles": "0.x"
+    "vtex.css-handles": "1.x"
   },
   "registries": [
     "smartcheckout"

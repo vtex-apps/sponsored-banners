@@ -1,6 +1,6 @@
 import React from 'react'
-import { Spinner } from 'vtex.styleguide'
 import { useCssHandles } from 'vtex.css-handles'
+import { Spinner } from 'vtex.styleguide'
 
 import { useSponsoredBanner } from './useSponsoredBanner'
 import { getDataProperties } from '../../utils'
@@ -30,6 +30,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
   return (
     <div
       {...dataProperties}
+      data-testid="banner"
       className={`${handles.bannerWrapper} flex justify-center items-center`}
       style={{
         maxWidth: banner.advertisement.width,
