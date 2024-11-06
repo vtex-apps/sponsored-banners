@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "sponsored-banners",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "title": "VTEX Sponsored Banners",
   "description": "Frontend apps that configure VTEX Ads sponsored banners in your storefront.",
   "builders": {
