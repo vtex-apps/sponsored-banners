@@ -22,6 +22,10 @@ jest.mock('vtex.device-detector', () => ({
   useDevice: jest.fn(),
 }))
 
+jest.mock('../../../query', () => ({
+  sponsoredBannersQuery: jest.fn(),
+}))
+
 describe('useSponsoredBanner hook', () => {
   describe('when it has data without error', () => {
     beforeEach(() => {
