@@ -14,8 +14,8 @@
     "react-dom": "^16.12.0",
     "react-intl": "^3.12.0",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles",
-    "vtex.store-resources": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-resources@0.101.1/public/@types/vtex.store-resources",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide"
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide",
+    "vtex.adserver-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.adserver-graphql@0.3.1/public/@types/vtex.adserver-graphql"
   },
   "devDependencies": {
     "@apollo/react-testing": "^3.1.3",
