@@ -1,8 +1,8 @@
 import { useQuery } from 'react-apollo'
 import { useIntl } from 'react-intl'
 import { useDevice } from 'vtex.device-detector'
-import sponsoredBannersQuery from 'vtex.store-resources/QuerySponsoredBanners'
 
+import sponsoredBannersQuery from '../../query'
 import messages from '../../messages'
 import type {
   SponsoredBannersData,
