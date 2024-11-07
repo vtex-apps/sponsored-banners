@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "sponsored-banners",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "title": "VTEX Sponsored Banners",
   "description": "Frontend apps that configure VTEX Ads sponsored banners in your storefront.",
   "builders": {
@@ -16,7 +16,9 @@
     "vtex.css-handles": "1.x",
     "vtex.adserver-graphql": "0.x"
   },
-  "registries": ["smartcheckout"],
+  "registries": [
+    "smartcheckout"
+  ],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
