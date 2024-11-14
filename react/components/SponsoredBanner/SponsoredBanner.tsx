@@ -6,8 +6,6 @@ import { useSponsoredBanner } from './useSponsoredBanner'
 import { getDataProperties } from '../../utils'
 import type { SponsoredBannersProps } from '../../interfaces'
 
-import './styles.css'
-
 const CSS_HANDLES = ['bannerWrapper', 'bannerImage'] as const
 
 export const SponsoredBanner = (props: SponsoredBannersProps) => {
@@ -36,6 +34,7 @@ export const SponsoredBanner = (props: SponsoredBannersProps) => {
         maxWidth: banner.advertisement.width,
         height: 'auto',
         aspectRatio: `${styleProps.ratio}`,
+        margin: '0 auto',
       }}
     >
       {loading ? (

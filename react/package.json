@@ -13,7 +13,6 @@
     "react-apollo": "^3.1.3",
     "react-dom": "^16.12.0",
     "react-intl": "^3.12.0",
-    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.9/public/@types/vtex.styleguide",
     "vtex.adserver-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.adserver-graphql@0.3.1/public/@types/vtex.adserver-graphql"
   },
